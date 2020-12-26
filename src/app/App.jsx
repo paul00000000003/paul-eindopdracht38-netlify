@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Scores from "./Scores";
 import Home from "../home/Home";
+import "./App.css";
 /*
 import RepresentationPerStudent from "../representationPerStudent/representationPerStudent";
 import RepresentationPerAssignmentMaster from "../representationPerAssignment/representationPerAssignmentMaster";
 import RepresentationMultipleStudents from "../representationMultipleStudents/representationMultipleStudents";
 import RepresentationMultipleAssignments from "../representationMultipleAssignments/representationMultipleAssignments";
-import "./App.css";
 */
 
 class App extends Component {
