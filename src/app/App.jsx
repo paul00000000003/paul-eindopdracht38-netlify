@@ -4,9 +4,9 @@ import Scores from "./Scores";
 import Home from "../home/Home";
 import "./App.css";
 import RepresentationPerStudent from "../representationPerStudent/representationPerStudent";
+import RepresentationMultipleStudents from "../representationMultipleStudents/representationMultipleStudents";
 /*
 import RepresentationPerAssignmentMaster from "../representationPerAssignment/representationPerAssignmentMaster";
-import RepresentationMultipleStudents from "../representationMultipleStudents/representationMultipleStudents";
 import RepresentationMultipleAssignments from "../representationMultipleAssignments/representationMultipleAssignments";
 */
 
