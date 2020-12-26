@@ -57,34 +57,31 @@ class App extends Component {
               <p id="titel_woord4">M o e i l i j k</p>
             </h1>
             <div>
-              <ul className="scoremogelijkheden">
+              <ul className="scorePossibilities">
                 <li className="li-nav">
                   <Link className="link nav-link" to="./">
                     Home
                   </Link>
-                  <li className="li-nav">
-                    {" "}
-                    <Link className="link" to={"./RepresentationPerStudent"}>
-                      Per student
-                    </Link>
-                  </li>
-                  <li className="li-nav">
-                    <Link
-                      className="link"
-                      to={"./representationMultipleStudents"}
-                    >
-                      Meerdere studenten
-                    </Link>
-                    <li className="li-nav">
-                      {" "}
-                      <Link
-                        className="link"
-                        to={"./representationPerAssignment"}
-                      >
-                        Per opdracht
-                      </Link>
-                    </li>
-                  </li>
+                </li>
+                <li className="li-nav">
+                  {" "}
+                  <Link className="link" to={"./RepresentationPerStudent"}>
+                    Per student
+                  </Link>
+                </li>
+                <li className="li-nav">
+                  <Link
+                    className="link"
+                    to={"./representationMultipleStudents"}
+                  >
+                    Meerdere studenten
+                  </Link>
+                </li>
+                <li className="li-nav">
+                  {" "}
+                  <Link className="link" to={"./representationPerAssignment"}>
+                    Per opdracht
+                  </Link>
                 </li>
               </ul>
             </div>
