@@ -5,8 +5,8 @@ import Home from "../home/Home";
 import "./App.css";
 import RepresentationPerStudent from "../representationPerStudent/representationPerStudent";
 import RepresentationMultipleStudents from "../representationMultipleStudents/representationMultipleStudents";
-/*
 import RepresentationPerAssignmentMaster from "../representationPerAssignment/representationPerAssignmentMaster";
+/*
 import RepresentationMultipleAssignments from "../representationMultipleAssignments/representationMultipleAssignments";
 */
 
@@ -23,12 +23,7 @@ class App extends Component {
   /*
 
 
-<li className="li-nav">
-  {" "}
-  <Link className="link" to={"./representationPerAssignment"}>
-    Per opdracht
-  </Link>
-</li>
+
 <li className="li-nav">
   <Link
     className="link"
@@ -40,9 +35,7 @@ class App extends Component {
 
       
            
-            <Route path="/representationPerAssignment">
-              <RepresentationPerAssignmentMaster scores={this.state.scores} />
-            </Route>
+       
             <Route path="/representationMultipleAssignments">
               <RepresentationMultipleAssignments scores={this.state.scores} />
             </Route>
@@ -82,6 +75,15 @@ class App extends Component {
                     >
                       Meerdere studenten
                     </Link>
+                    <li className="li-nav">
+                      {" "}
+                      <Link
+                        className="link"
+                        to={"./representationPerAssignment"}
+                      >
+                        Per opdracht
+                      </Link>
+                    </li>
                   </li>
                 </li>
               </ul>
@@ -97,6 +99,9 @@ class App extends Component {
             </Route>
             <Route path="/representationMultipleStudents">
               <RepresentationMultipleStudents scores={this.state.scores} />
+            </Route>
+            <Route path="/representationPerAssignment">
+              <RepresentationPerAssignmentMaster scores={this.state.scores} />
             </Route>
           </Switch>
         </Router>
