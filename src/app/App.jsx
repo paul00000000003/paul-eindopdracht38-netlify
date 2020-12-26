@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Scores from "./Scores";
 import Home from "../home/Home";
 import "./App.css";
-/*
 import RepresentationPerStudent from "../representationPerStudent/representationPerStudent";
+/*
 import RepresentationPerAssignmentMaster from "../representationPerAssignment/representationPerAssignmentMaster";
 import RepresentationMultipleStudents from "../representationMultipleStudents/representationMultipleStudents";
 import RepresentationMultipleAssignments from "../representationMultipleAssignments/representationMultipleAssignments";
@@ -21,12 +21,7 @@ class App extends Component {
   }
 
   /*
-  <li className="li-nav">
-  {" "}
-  <Link className="link" to={"./RepresentationPerStudent"}>
-    Per student
-  </Link>
-</li>
+
 <li className="li-nav">
   <Link
     className="link"
@@ -50,9 +45,7 @@ class App extends Component {
   </Link>
 </li>
 
-           <Route path="/RepresentationPerStudent">
-              <RepresentationPerStudent scores={this.state.scores} />
-            </Route>
+      
             <Route path="/representationMultipleStudents">
               <RepresentationMultipleStudents scores={this.state.scores} />
             </Route>
@@ -85,6 +78,12 @@ class App extends Component {
                   <Link className="link nav-link" to="./">
                     Home
                   </Link>
+                  <li className="li-nav">
+                    {" "}
+                    <Link className="link" to={"./RepresentationPerStudent"}>
+                      Per student
+                    </Link>
+                  </li>
                 </li>
               </ul>
             </div>
@@ -93,6 +92,9 @@ class App extends Component {
           <Switch>
             <Route exact path="/">
               <Home scores={this.state.scores} />
+            </Route>
+            <Route path="/RepresentationPerStudent">
+              <RepresentationPerStudent scores={this.state.scores} />
             </Route>
           </Switch>
         </Router>
