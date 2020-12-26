@@ -1,8 +1,9 @@
 import React from "react";
-import StudentLine from "./studentLine";
-import "./representationMultipleStudents.css";
-import MakeLineChart from "./makeLineChart";
+//import StudentLine from "./studentLine";
+//import "./representationMultipleStudents.css";
+//import MakeLineChart from "./makeLineChart";
 
+/*
 let students = [];
 let data = [];
 let assignments = [];
@@ -82,7 +83,7 @@ const make_lineChart_data = (chosenStudents, assignments, scores) => {
   });
   return dataLineChart;
 };
-
+*/
 class RepresentationMultipleStudents extends React.Component {
   constructor() {
     super();
@@ -95,9 +96,9 @@ class RepresentationMultipleStudents extends React.Component {
       lineChartOk: false,
       chosenStudents: [],
     };
-    this.handleChange = this.handleChange.bind(this);
+    //    this.handleChange = this.handleChange.bind(this);
   }
-
+  /*
   handleChange(index, dash) {
     chosenStudents = this.state.chosenStudents;
     if (dash.checked === true) {
@@ -147,9 +148,9 @@ class RepresentationMultipleStudents extends React.Component {
     });
   }
 
-  render() {
-    sortStudents(students);
-    if (1 !== 1) console.log("dit verwacht ik niet");
+
+
+  sortStudents(students);
     let studentsLinkLines = students.map((element, index) => {
       return (
         <StudentLine
@@ -160,36 +161,41 @@ class RepresentationMultipleStudents extends React.Component {
         />
       );
     });
-    return (
-      <div>
-        <h1 className="title">Kies een of meerdere studenten</h1>
-        <nav>
-          <ul id="ulListMS">{studentsLinkLines}</ul>
-        </nav>
-        {this.state.chosenStudents.length > 0 ? (
-          <MakeLineChart
-            dataLineChart={this.state.dataLineChart}
-            students={this.state.chosenStudents}
-            scorechoice={this.state.scoreChoice}
-          />
-        ) : (
-          <div>
-            <img
-              id="shiftPictureMultiple"
-              src="https://www.mupload.nl/img/0npaaxw.gif"
-              alt="studenten"
-              width="300px"
-            />
-            <img
-              id="shiftPictureMultiple"
-              src="https://www.mupload.nl/img/0npaaxw.gif"
-              alt="studenten"
-              width="300px"
-            />
-          </div>
-        )}
-      </div>
-    );
+*/
+
+  /*
+<div>
+<h1 className="title">Kies een of meerdere studenten</h1>
+<nav>
+  <ul id="ulListMS">{studentsLinkLines}</ul>
+</nav>
+{this.state.chosenStudents.length > 0 ? (
+  <MakeLineChart
+    dataLineChart={this.state.dataLineChart}
+    students={this.state.chosenStudents}
+    scorechoice={this.state.scoreChoice}
+  />
+) : (
+  <div>
+    <img
+      id="shiftPictureMultiple"
+      src="https://www.mupload.nl/img/0npaaxw.gif"
+      alt="studenten"
+      width="300px"
+    />
+    <img
+      id="shiftPictureMultiple"
+      src="https://www.mupload.nl/img/0npaaxw.gif"
+      alt="studenten"
+      width="300px"
+    />
+  </div>
+)}
+</div>
+*/
+
+  render() {
+    return <h1>h1</h1>;
   }
 }
 
