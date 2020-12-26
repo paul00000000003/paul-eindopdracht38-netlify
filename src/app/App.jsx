@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Scores from "./Scores";
 import Home from "../home/home";
 import "./App.css";
-import RepresentationPerStudent from "../representation-per-student/representationPerStudent";
-import RepresentationMultipleStudents from "../representation-multiple-students/representationMultipleStudents";
-import RepresentationPerAssignmentMaster from "../representation-per-assignment/representationPerAssignmentMaster";
-import RepresentationMultipleAssignments from "../representation-multiple-assignments/representationMultipleAssignments";
+//import RepresentationPerStudent from "../representation-per-student/representationPerStudent";
+//import RepresentationMultipleStudents from "../representation-multiple-students/representationMultipleStudents";
+//import RepresentationPerAssignmentMaster from "../representation-per-assignment/representationPerAssignmentMaster";
+//import RepresentationMultipleAssignments from "../representation-multiple-assignments/representationMultipleAssignments";
 
 class App extends Component {
   constructor() {
@@ -17,6 +17,52 @@ class App extends Component {
   componentDidMount() {
     this.setState({ scores: Scores, schermGeladen: true });
   }
+
+  /*
+  <li className="li-nav">
+  {" "}
+  <Link className="link" to={"./representation-per-student"}>
+    Per student
+  </Link>
+</li>
+<li className="li-nav">
+  <Link
+    className="link"
+    to={"./representation-multiple-students"}
+  >
+    Meerdere studenten
+  </Link>
+</li>
+<li className="li-nav">
+  {" "}
+  <Link className="link" to={"./representation-per-assignment"}>
+    Per opdracht
+  </Link>
+</li>
+<li className="li-nav">
+  <Link
+    className="link"
+    to={"./representation-multiple-assignments"}
+  >
+    Meerdere opdrachten
+  </Link>
+</li>
+*/
+
+  /*            
+<Route path="/representation-per-student">
+<RepresentationPerStudent scores={this.state.scores} />
+</Route>
+<Route path="/representation-multiple-students">
+<RepresentationMultipleStudents scores={this.state.scores} />
+</Route>
+<Route path="/representation-per-assignment">
+<RepresentationPerAssignmentMaster scores={this.state.scores} />
+</Route>
+<Route path="/representation-multiple-assignments">
+<RepresentationMultipleAssignments scores={this.state.scores} />
+</Route>
+*/
 
   render() {
     if (this.state.schermGeladen) {
@@ -39,34 +85,6 @@ class App extends Component {
                     Home
                   </Link>
                 </li>
-                <li className="li-nav">
-                  {" "}
-                  <Link className="link" to={"./representation-per-student"}>
-                    Per student
-                  </Link>
-                </li>
-                <li className="li-nav">
-                  <Link
-                    className="link"
-                    to={"./representation-multiple-students"}
-                  >
-                    Meerdere studenten
-                  </Link>
-                </li>
-                <li className="li-nav">
-                  {" "}
-                  <Link className="link" to={"./representation-per-assignment"}>
-                    Per opdracht
-                  </Link>
-                </li>
-                <li className="li-nav">
-                  <Link
-                    className="link"
-                    to={"./representation-multiple-assignments"}
-                  >
-                    Meerdere opdrachten
-                  </Link>
-                </li>
               </ul>
             </div>
           </nav>
@@ -74,18 +92,6 @@ class App extends Component {
           <Switch>
             <Route exact path="/">
               <Home scores={this.state.scores} />
-            </Route>
-            <Route path="/representation-per-student">
-              <RepresentationPerStudent scores={this.state.scores} />
-            </Route>
-            <Route path="/representation-multiple-students">
-              <RepresentationMultipleStudents scores={this.state.scores} />
-            </Route>
-            <Route path="/representation-per-assignment">
-              <RepresentationPerAssignmentMaster scores={this.state.scores} />
-            </Route>
-            <Route path="/representation-multiple-assignments">
-              <RepresentationMultipleAssignments scores={this.state.scores} />
             </Route>
           </Switch>
         </Router>
