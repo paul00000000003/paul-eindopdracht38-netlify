@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Scores from "./Scores";
-import Home from "../home/home";
+import Home from "../home/Home";
 import "./App.css";
 //import RepresentationPerStudent from "../representation-per-student/representationPerStudent";
 //import RepresentationMultipleStudents from "../representation-multiple-students/representationMultipleStudents";
