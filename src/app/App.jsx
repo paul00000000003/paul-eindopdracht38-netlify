@@ -22,14 +22,7 @@ class App extends Component {
 
   /*
 
-<li className="li-nav">
-  <Link
-    className="link"
-    to={"./representationMultipleStudents"}
-  >
-    Meerdere studenten
-  </Link>
-</li>
+
 <li className="li-nav">
   {" "}
   <Link className="link" to={"./representationPerAssignment"}>
@@ -46,9 +39,7 @@ class App extends Component {
 </li>
 
       
-            <Route path="/representationMultipleStudents">
-              <RepresentationMultipleStudents scores={this.state.scores} />
-            </Route>
+           
             <Route path="/representationPerAssignment">
               <RepresentationPerAssignmentMaster scores={this.state.scores} />
             </Route>
@@ -84,6 +75,14 @@ class App extends Component {
                       Per student
                     </Link>
                   </li>
+                  <li className="li-nav">
+                    <Link
+                      className="link"
+                      to={"./representationMultipleStudents"}
+                    >
+                      Meerdere studenten
+                    </Link>
+                  </li>
                 </li>
               </ul>
             </div>
@@ -95,6 +94,9 @@ class App extends Component {
             </Route>
             <Route path="/RepresentationPerStudent">
               <RepresentationPerStudent scores={this.state.scores} />
+            </Route>
+            <Route path="/representationMultipleStudents">
+              <RepresentationMultipleStudents scores={this.state.scores} />
             </Route>
           </Switch>
         </Router>
