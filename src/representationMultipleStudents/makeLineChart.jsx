@@ -1,5 +1,4 @@
 import React from "react";
-import "./makeLineChartMultipleStudents.css";
 import {
   LineChart,
   Line,
