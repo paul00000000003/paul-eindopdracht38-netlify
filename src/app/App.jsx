@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Scores from "./Scores";
 import Home from "../home/Home";
 import "./App.css";
-//import RepresentationPerStudent from "../representation-per-student/representationPerStudent";
+import RepresentationPerStudent from "../representation-per-student/representationPerStudent";
 //import RepresentationMultipleStudents from "../representation-multiple-students/representationMultipleStudents";
 //import RepresentationPerAssignmentMaster from "../representation-per-assignment/representationPerAssignmentMaster";
 //import RepresentationMultipleAssignments from "../representation-multiple-assignments/representationMultipleAssignments";
@@ -19,12 +19,7 @@ class App extends Component {
   }
 
   /*
-  <li className="li-nav">
-  {" "}
-  <Link className="link" to={"./representation-per-student"}>
-    Per student
-  </Link>
-</li>
+ 
 <li className="li-nav">
   <Link
     className="link"
@@ -50,9 +45,7 @@ class App extends Component {
 */
 
   /*            
-<Route path="/representation-per-student">
-<RepresentationPerStudent scores={this.state.scores} />
-</Route>
+
 <Route path="/representation-multiple-students">
 <RepresentationMultipleStudents scores={this.state.scores} />
 </Route>
@@ -85,6 +78,12 @@ class App extends Component {
                     Home
                   </Link>
                 </li>
+                <li className="li-nav">
+                  {" "}
+                  <Link className="link" to={"./representation-per-student"}>
+                    Per student
+                  </Link>
+                </li>
               </ul>
             </div>
           </nav>
@@ -92,6 +91,9 @@ class App extends Component {
           <Switch>
             <Route exact path="/">
               <Home scores={this.state.scores} />
+            </Route>
+            <Route path="/representation-per-student">
+              <RepresentationPerStudent scores={this.state.scores} />
             </Route>
           </Switch>
         </Router>
